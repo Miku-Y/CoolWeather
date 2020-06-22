@@ -9,3 +9,4 @@
         <mapping class = "com.coolweather.android.db.County"/>
     </list>
 </litepal>
+<!--测试As上传-->
