@@ -95,7 +95,7 @@ public class Utility {
         try {
             //将天气信息的主体内容解析出来
             JSONObject jsonObject = new JSONObject(response);
-            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather6");
             String weatherContent = jsonArray.getJSONObject(0).toString();
             //将JSON数据转换为weather对象
             return new Gson().fromJson(weatherContent, Weather.class);
