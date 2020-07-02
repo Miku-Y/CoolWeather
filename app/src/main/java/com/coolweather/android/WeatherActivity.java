@@ -97,7 +97,7 @@ public class WeatherActivity extends AppCompatActivity {
         scText = findViewById(R.id.sc_text);//实时天气信息--风力
         spdText = findViewById(R.id.spd_text); //实时天气信息--风速
         forecastLayout = findViewById(R.id.forecast_layout);//线性布局对象--预报天气
-        drawerLayout = findViewById(R.id.drawer_layout);//DrawerLayout实例
+        drawerLayout = findViewById(R.id.drawer_layout);//DrawerLayout抽屉布局实例
         navButton = findViewById(R.id.nav_button);//Button实例
 
         swipeRefresh = findViewById(R.id.swipe_refresh);//获取SwipeRefreshLayout的实例
