@@ -72,38 +72,6 @@ public class WeatherActivity extends AppCompatActivity {
 
     private LinearLayout forecastLayout;//线性布局对象--预报天气
 
-    private TextView aqiText;//空气质量--空气质量指数
-
-    private TextView coText;//空气质量--一氧化碳指数
-
-    private TextView no2Text;//空气质量--二氧化氮指数
-
-    private TextView o3Text;//空气质量--臭氧指数
-
-    private TextView pm10Text;//空气质量--PM10指数
-
-    private TextView pm25Text;//空气质量--PM2.5指数
-
-    private TextView qltyText;//空气质量--空气质量水平
-
-    private TextView so2Text;//空气质量--二氧化硫指数
-
-    private TextView airText;//生活建议--空气质量指数
-
-    private TextView comfortText;//生活建议--舒适度指数
-
-    private TextView carWashText;//生活建议--洗车指数
-
-    private TextView drsgText;//生活建议--穿衣指数
-
-    private TextView fluText;//生活建议--感冒指数
-
-    private TextView sportText;//生活建议--运动指数
-
-    private TextView travText;//生活建议--旅游指数
-
-    private TextView uvText;//生活建议--紫外线指数
-
     private ImageView bingPicImg;//背景图片
 
     @Override
@@ -112,27 +80,27 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_weather);
 
         //初始化各控件
-        bingPicImg = (ImageView)findViewById(R.id.bing_pic_img);//背景图片
-        weatherLayout = (ScrollView) findViewById(R.id.weather_layout);//滚动视图对象
-        titleCity = (TextView) findViewById(R.id.title_city);//基本信息--城市
-        titleUpdateTime = (TextView) findViewById(R.id.title_update_time);//基本信息--更新时间
-        titleLat = (TextView) findViewById(R.id.lat_text);//基本信息--经度
-        titleLon = (TextView) findViewById(R.id.lon_text);//基本信息--纬度
-        weatherInfoText = (TextView) findViewById(R.id.weather_info_text);//实时天气信息--天气信息
-        flText = (TextView) findViewById(R.id.fl_text) ;//实时天气信息--体感温度
-        humText = (TextView) findViewById(R.id.hum_text);//实时天气信息--相对湿度
-        pcpnText = (TextView) findViewById(R.id.pcpn_text);//实时天气信息--降水量
-        presText = (TextView) findViewById(R.id.pres_text); //实时天气信息--大气压强
-        tmpText = (TextView) findViewById(R.id.tmp_text);//实时天气信息--温度
-        visText = (TextView) findViewById(R.id.vis_text);//实时天气信息--能见度
-        dirText = (TextView) findViewById(R.id.dir_text);//实时天气信息--风向
-        scText = (TextView) findViewById(R.id.sc_text);//实时天气信息--风力
-        spdText = (TextView) findViewById(R.id.spd_text); //实时天气信息--风速
-        forecastLayout = (LinearLayout) findViewById(R.id.forecast_layout);//线性布局对象--预报天气
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);//DrawerLayout实例
-        navButton = (Button) findViewById(R.id.nav_button);//Button实例
+        bingPicImg = findViewById(R.id.bing_pic_img);//背景图片
+        weatherLayout = findViewById(R.id.weather_layout);//滚动视图对象
+        titleCity = findViewById(R.id.title_city);//基本信息--城市
+        titleUpdateTime = findViewById(R.id.title_update_time);//基本信息--更新时间
+        titleLat = findViewById(R.id.lat_text);//基本信息--经度
+        titleLon = findViewById(R.id.lon_text);//基本信息--纬度
+        weatherInfoText = findViewById(R.id.weather_info_text);//实时天气信息--天气信息
+        flText = findViewById(R.id.fl_text) ;//实时天气信息--体感温度
+        humText = findViewById(R.id.hum_text);//实时天气信息--相对湿度
+        pcpnText = findViewById(R.id.pcpn_text);//实时天气信息--降水量
+        presText = findViewById(R.id.pres_text); //实时天气信息--大气压强
+        tmpText = findViewById(R.id.tmp_text);//实时天气信息--温度
+        visText = findViewById(R.id.vis_text);//实时天气信息--能见度
+        dirText = findViewById(R.id.dir_text);//实时天气信息--风向
+        scText = findViewById(R.id.sc_text);//实时天气信息--风力
+        spdText = findViewById(R.id.spd_text); //实时天气信息--风速
+        forecastLayout = findViewById(R.id.forecast_layout);//线性布局对象--预报天气
+        drawerLayout = findViewById(R.id.drawer_layout);//DrawerLayout实例
+        navButton = findViewById(R.id.nav_button);//Button实例
 
-        swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);//获取SwipeRefreshLayout的实例
+        swipeRefresh = findViewById(R.id.swipe_refresh);//获取SwipeRefreshLayout的实例
         swipeRefresh.setColorSchemeResources(R.color.colorPrimary);//调用setColorSchemeResources()方法来设置下拉刷新进度条的颜色
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String weatherString = prefs.getString("weather", null);
@@ -293,12 +261,12 @@ public class WeatherActivity extends AppCompatActivity {
         forecastLayout.removeAllViews();
         for(Forecast forecast : weather.forecastList){
             View view = LayoutInflater.from(this).inflate(R.layout.forecast_item,forecastLayout,false);
-            TextView dateText = (TextView)view.findViewById(R.id.date_text);
-            TextView infoText = (TextView)view.findViewById(R.id.info_text);
-            TextView maxText = (TextView)view.findViewById(R.id.max_text);
-            TextView minText = (TextView)view.findViewById(R.id.min_text);
-            TextView dirText = (TextView)view.findViewById(R.id.dir_text);
-            TextView scText = (TextView)view.findViewById(R.id.sc_text);
+            TextView dateText = view.findViewById(R.id.date_text);
+            TextView infoText = view.findViewById(R.id.info_text);
+            TextView maxText = view.findViewById(R.id.max_text);
+            TextView minText = view.findViewById(R.id.min_text);
+            TextView dirText = view.findViewById(R.id.dir_text);
+            TextView scText = view.findViewById(R.id.sc_text);
             dateText.setText(forecast.date);
             infoText.setText(forecast.info);
             maxText.setText(forecast.max);
