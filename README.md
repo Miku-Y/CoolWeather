@@ -112,7 +112,7 @@ Cool天气-和风天气API真实数据
 
 >   准备一张图片来作为软件图标，将这张图片命名为logo.png，放入mipmap开头的目录下,然后修改AndroidManifest.xml中的代码
 
-![Rw8f.png](https://img.auxiz.com/Rw8f.png)
+![XXcq.png](https://img.auxiz.com/XXcq.png)
 
 >   打开res/values/sring.xml文件来修改程序名称
 
