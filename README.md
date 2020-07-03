@@ -1,7 +1,7 @@
 # CoolWeather
 Cool天气-和风天气API真实数据
 
-##一、实训内容
+## 一、实训内容
 
 > 功能需求及技术可行性分析
 
@@ -21,7 +21,7 @@ Cool天气-和风天气API真实数据
 
 > 修改图标和名称
 
-##二、实训目的及要求
+## 二、实训目的及要求
 
 1. 可以查询全国所有省、市、县的数据（列表）
 
@@ -32,7 +32,7 @@ Cool天气-和风天气API真实数据
 4. 可以手动更新以及后台自动更新天气
 
 
-##三、数据地址
+## 三、数据地址
 
 > 城市信息 <http://guolin.tech/api/china>
 
@@ -40,15 +40,15 @@ Cool天气-和风天气API真实数据
 
 > 必应每日一图 <http://guolin.tech/api/bing_pic>
 
-##四、思维导图
+## 四、思维导图
 
 ![R2kH.png](https://img.auxiz.com/R2kH.png)
 
 ![R9sJ.png](https://img.auxiz.com/R9sJ.png)
 
-##五、实训步骤及操作方法
+## 五、实训步骤及操作方法
 
-####1.创建数据库和表
+#### 1.创建数据库和表
 
 > 在app/build.gradle中，将项目所需的各种依赖库进行声明
 
@@ -64,7 +64,7 @@ Cool天气-和风天气API真实数据
 
 ![R86j.png](https://img.auxiz.com/R86j.png)
 
-####2.遍历全国省市县数据
+#### 2.遍历全国省市县数据
 
 > 全国省市县的数据都是从服务器端获取的，util包下的HttpUtil类，调用sendOkHttpRequest()方法，传入请求地址，并注册一个回调来处理服务器响应
 
@@ -78,7 +78,7 @@ Cool天气-和风天气API真实数据
 
 ![RJOl.png](https://img.auxiz.com/RJOl.png)
 
-####3.显示真实天气信息
+#### 3.显示真实天气信息
 
 > 在gson包下的Basic类、Forecast类、Now类、Update类中，由于JSON中的一些字段不适合直接用来使用，所以可以使用\@SerializedName()的方式，将JSON字段写在里面，在Weather类中，对Basic类、Forecast类、Now类、Update类进行了引用，由于daily_forecast包含的是一个数组，因此使用List集合来引用Forecast类
 
@@ -88,13 +88,13 @@ Cool天气-和风天气API真实数据
 
 ![RzuM.png](https://img.auxiz.com/RzuM.png)
 
-####4.获取必应每日一图
+#### 4.获取必应每日一图
 
 >   访问每日一图接口：http://guolin.tech/api/bing_pic，服务器就会返回今日的必应背景图链接，然后再使用Glide去加载这张图片。
 
 ![RYkP.png](https://img.auxiz.com/RYkP.png)
 
-####5.手动更新天气和切换城市
+#### 5.手动更新天气和切换城市
 
 ![Rp77.png](https://img.auxiz.com/Rp77.png)
 
@@ -102,13 +102,13 @@ Cool天气-和风天气API真实数据
 
 ![Rdzt.png](https://img.auxiz.com/Rdzt.png)
 
-####6.后台自动更新天气
+#### 6.后台自动更新天气
 
 ![RMHX.png](https://img.auxiz.com/RMHX.png)
 
 ![RnQr.png](https://img.auxiz.com/RnQr.png)
 
-####7.修改图标和名称
+#### 7.修改图标和名称
 
 >   准备一张图片来作为软件图标，将这张图片命名为logo.png，放入mipmap开头的目录下,然后修改AndroidManifest.xml中的代码
 
@@ -120,6 +120,6 @@ Cool天气-和风天气API真实数据
 
 ![RS21.png](https://img.auxiz.com/RS21.png)
 
-##六、效果演示
+## 六、效果演示
 
 ![RODI.gif](https://img.auxiz.com/RODI.gif)
