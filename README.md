@@ -68,7 +68,7 @@ Cool天气-和风天气API真实数据
 
 > 全国省市县的数据都是从服务器端获取的，util包下的HttpUtil类，调用sendOkHttpRequest()方法，传入请求地址，并注册一个回调来处理服务器响应
 
-![RIQF.png](https://img.auxiz.com/RIQF.png)
+![XRHu.png](https://img.auxiz.com/XRHu.png)
 
 > 由于服务器返回的省市县的数据都是JSON格式，util包下的Utility类分别提供handleProvinceResponse()、handleCityResponse()、handleCountyResponse()这三个方法，用于解析和处理从服务器返回的各级数据。
 
@@ -86,7 +86,7 @@ Cool天气-和风天气API真实数据
 
 > 在Utility类中的handleWeatherResponse()方法用于解析天气JSON数据，WeatherActivity类中的requestWeather()、showWeatherInfo()方法在活动中请求天气数据，以及将数据展示到界面上。
 
-![RzuM.png](https://img.auxiz.com/RzuM.png)
+![RTkS.png](https://img.auxiz.com/RTkS.png)
 
 #### 4.获取必应每日一图
 
@@ -100,13 +100,13 @@ Cool天气-和风天气API真实数据
 
 ![RWtp.png](https://img.auxiz.com/RWtp.png)
 
-![Rdzt.png](https://img.auxiz.com/Rdzt.png)
+![Rv7U.png](https://img.auxiz.com/Rv7U.png)
 
 #### 6.后台自动更新天气
 
-![RMHX.png](https://img.auxiz.com/RMHX.png)
+![X6zw.png](https://img.auxiz.com/X6zw.png)
 
-![RnQr.png](https://img.auxiz.com/RnQr.png)
+![X5yD.png](https://img.auxiz.com/X5yD.png)
 
 #### 7.修改图标和名称
 
